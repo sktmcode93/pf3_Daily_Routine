@@ -1,0 +1,233 @@
+#PORTPOLIO3 {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/bg-dr.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    position: relative;
+}
+.dr-today {
+    position: absolute;
+    left: 10vw;
+    top: 15vh;
+    height: 75vh;
+    background-color: #fff;
+    border-radius: 25px;
+}
+.dr-title {
+    font-size: 1.5rem;
+    width: 25vw;
+    text-align: center;
+    padding: 20px 0;
+}
+.dr-list {
+    width: 80%;
+    margin: 0 10%;
+}
+.dr-list-routine {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 10px 0;
+    border-bottom: 2px solid black;
+}
+.dr-routine-check {
+    position: absolute;
+    top: 22px;
+    left: -20px;
+    display: none;
+}
+.dr-routine-connect {
+    margin: 0 10px;   
+}
+.dr-routine-rout {
+    margin-left: 10px;
+}
+.dr-today input{
+    position: absolute;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+}
+.dr-today input:hover {
+    cursor: pointer;
+    color : #3298cb;
+}
+.dr-add-btn {
+    top: 20px;
+    right: 80px;
+}
+.dr-del-btn {
+    top: 18px; right: 40px;
+}
+.dr-del-box {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    display: none;
+}
+.dr-del-box span {
+    padding-bottom: 3px;
+}
+.dr-del-box span:hover {
+    cursor: pointer;
+    color : #3298cb;
+    border-bottom: 2px solid #3298cb;
+}
+.dr-del-explain {
+    position: absolute;
+    top: 15px;
+    right: 9999px;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50px;
+}
+.dr-del-btn:hover + .dr-del-explain {
+    right: -80px;
+}
+.dr-add-explain {
+    position: absolute;
+    top: -9999px;
+    right: 50px;
+    font-size: 1rem;
+    padding: 10px;
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 50px;
+}
+.dr-add-btn:hover + .dr-add-explain {
+    top: -40px;
+}
+
+/* 일정 추가하기 */
+.dr-add-box {
+    position: absolute;
+    left: 40vw;
+    top: 60vh;
+    padding: 50px 30px 20px;
+    background-color: rgba(255,255,0,0.5);
+    border-radius: 25px;
+    display: none;
+    opacity: 0;
+    transition: opacity ease 0.5s;
+}
+.dr-active {
+    opacity: 1;
+}
+.dr-box-btns{
+    text-align: right;
+    margin-top: 10px;
+}
+.dr-box-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1rem;
+    margin-left: 10px;
+    padding-bottom: 5px;
+}
+.dr-box-btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: #3298cb;
+    border-bottom: 2px solid #3298cb;
+}
+.dr-add-each {
+    position: relative;
+}
+.dr-add-each input {
+    padding: 0 5px;
+}
+.dr-each-explain {
+    position: absolute;
+    left: 0;
+    top: -25px;
+    color: rgba(0,0,0,0.5);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+.dr-add-routine {
+    font-size: 1rem;
+    padding: 0 5px;
+}
+
+/* 반응형 디자인 */
+@media (max-width : 1280px){
+    .dr-title {
+        width: 40vw;
+    }
+    .dr-add-explain {
+        right: 55px;
+    }
+    
+    /* 일정 추가하기 */
+    .dr-add-box {
+        left: 50vw;
+    }
+    .dr-active {
+        opacity: 1;
+    }
+    .dr-box-btns{
+        text-align: right;
+        margin-top: 10px;
+    }
+    .dr-box-btn {
+        border: none;
+        background-color: transparent;
+        font-size: 1rem;
+        margin-left: 10px;
+        padding-bottom: 5px;
+    }
+    .dr-box-btn:hover {
+        cursor: pointer;
+        font-weight: bold;
+        color: #3298cb;
+        border-bottom: 2px solid #3298cb;
+    }
+    .dr-add-each {
+        position: relative;
+    }
+    .dr-add-each input {
+        padding: 0 5px;
+    }
+    .dr-each-explain {
+        position: absolute;
+        left: 0;
+        top: -25px;
+        color: rgba(0,0,0,0.5);
+        font-weight: bold;
+        font-size: 0.8rem;
+    }
+    .dr-add-routine {
+        font-size: 1rem;
+        padding: 0 5px;
+    }
+}
+@media (max-width : 960px){
+    .dr-title {
+        width: 70vw;
+    }
+    .dr-today {
+        left: 15vw;
+        height: 50vh;
+    }
+    .dr-add-box {
+        left: 15vw;
+        top: 70vh;
+    }
+}
+@media (max-width : 720px){
+    .dr-title {
+        width: 70vw;
+    }
+}
+@media (max-width : 480px){
+    .dr-title {
+        width: 80vw;
+    }
+    .dr-del-explain {
+        top: 20px;
+    }
+    .dr-del-btn:hover + .dr-del-explain {
+        right: -50px;
+    }
+}
