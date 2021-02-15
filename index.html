@@ -15,33 +15,35 @@
 <body>
     <main id="app">
         <section id="PORTPOLIO3">
-            <div class="dr-today">
-                <h1 class="dr-title">Daily Routine</h1>
-                <input type="button" class="dr-add-btn" value="+" onclick="po3addClickHandler()">
-                <span class="dr-add-explain">추가하기</span>
-                <ul class="dr-list"></ul>
-                <input type="button" class="dr-del-btn" value="-" onclick="delListHandler()">
-                <span class="dr-del-explain">삭제하기</span>
-                <div class="dr-del-box">
-                    <span class="dr-del-del" onclick="confirmDeletion()">삭제</span>
-                    <span class="dr-del-cancel" onclick="cancelDeletion()">취소</span>
+            <div class="container">
+                <div class="dr-today">
+                    <h1 class="dr-title">Daily Routine</h1>
+                    <input type="button" class="dr-add-btn" value="+" onclick="po3addClickHandler()">
+                    <span class="dr-add-explain">추가하기</span>
+                    <ul class="dr-list"></ul>
+                    <input type="button" class="dr-del-btn" value="-" onclick="delListHandler()">
+                    <span class="dr-del-explain">삭제하기</span>
+                    <div class="dr-del-box">
+                        <span class="dr-del-del" onclick="confirmDeletion()">삭제</span>
+                        <span class="dr-del-cancel" onclick="cancelDeletion()">취소</span>
+                    </div>
                 </div>
+                <form class="dr-add-box" onsubmit="event.preventDefault()">
+                    <span class="dr-add-start dr-add-each">
+                        <span class="dr-each-explain">시작 시간</span>
+                        <input type="time">
+                    </span>
+                    <span class="dr-add-end dr-add-each">
+                        <span class="dr-each-explain">종료 시간</span>
+                        <input type="time">
+                    </span>
+                    <input type="text" class="dr-add-routine" placeholder="일정">
+                    <div class="dr-box-btns">
+                        <input type="button" class="dr-add-add dr-box-btn" value="추가" onclick="addInputHandler()">
+                        <input type="button" class="dr-add-cancel dr-box-btn" value="취소" onclick="clearAddBox()">
+                    </div>
+                </form>
             </div>
-            <form class="dr-add-box" onsubmit="event.preventDefault()">
-                <span class="dr-add-start dr-add-each">
-                    <span class="dr-each-explain">시작 시간</span>
-                    <input type="time">
-                </span>
-                <span class="dr-add-end dr-add-each">
-                    <span class="dr-each-explain">종료 시간</span>
-                    <input type="time">
-                </span>
-                <input type="text" class="dr-add-routine" placeholder="일정">
-                <div class="dr-box-btns">
-                    <input type="button" class="dr-add-add dr-box-btn" value="추가" onclick="addInputHandler()">
-                    <input type="button" class="dr-add-cancel dr-box-btn" value="취소" onclick="clearAddBox()">
-                </div>
-            </form>
         </section>
     </main>
     <script src="js/main.js"></script>

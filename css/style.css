@@ -6,34 +6,46 @@
     background-position: bottom center;
     position: relative;
 }
+.container{
+    width: 1920px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
 .dr-today {
     position: absolute;
-    left: 10vw;
-    top: 15vh;
-    height: 75vh;
+    left: 50px;
+    top: 150px;
+    height: fit-content;
     background-color: #fff;
     border-radius: 25px;
+    width: 600px;
 }
 .dr-title {
     font-size: 1.5rem;
-    width: 25vw;
     text-align: center;
     padding: 20px 0;
 }
 .dr-list {
     width: 80%;
     margin: 0 10%;
+    height: 700px;
+    overflow: scroll;
+}
+.dr-list::-webkit-scrollbar{
+    display: none;
 }
 .dr-list-routine {
     position: relative;
     font-size: 1.5rem;
     padding: 10px 0;
     border-bottom: 2px solid black;
+    padding-left: 20px;
 }
 .dr-routine-check {
     position: absolute;
     top: 22px;
-    left: -20px;
+    left: 0;
     display: none;
 }
 .dr-routine-connect {
@@ -102,8 +114,8 @@
 /* 일정 추가하기 */
 .dr-add-box {
     position: absolute;
-    left: 40vw;
-    top: 60vh;
+    left: 800px;
+    top: 700px;
     padding: 50px 30px 20px;
     background-color: rgba(255,255,0,0.5);
     border-radius: 25px;
@@ -151,9 +163,23 @@
 }
 
 /* 반응형 디자인 */
+@media (max-width : 1920px){
+    .container{
+        width: 1280px;
+    }
+    .dr-today{
+        width: 500px;
+    }
+    .dr-list{
+        height: 600px;
+    }
+    .dr-add-box{
+        left: 700px;
+    }
+}
 @media (max-width : 1280px){
-    .dr-title {
-        width: 40vw;
+    .container{
+        width: 960px;
     }
     .dr-add-explain {
         right: 55px;
@@ -161,7 +187,8 @@
     
     /* 일정 추가하기 */
     .dr-add-box {
-        left: 50vw;
+        top: 150px;
+        left: 600px;
     }
     .dr-active {
         opacity: 1;
@@ -203,31 +230,65 @@
     }
 }
 @media (max-width : 960px){
-    .dr-title {
-        width: 70vw;
+    .container{
+        width: 720px;
     }
     .dr-today {
-        left: 15vw;
-        height: 50vh;
+        left: 110px;
+        width: 500px;
+        top: 100px;
+    }
+    .dr-list{
+        height: 600px;
     }
     .dr-add-box {
-        left: 15vw;
-        top: 70vh;
+        left: 110px;
+        top: 800px;
     }
 }
 @media (max-width : 720px){
-    .dr-title {
-        width: 70vw;
+    .container{
+        width: 480px;
     }
+    .dr-today{
+        left: 10px;
+        width: 460px;
+        top: 50px;
+    }
+    .dr-title{
+        font-size: 1.1rem;
+    }
+    .dr-list-routine{
+        font-size: 1rem;
+    }
+    .dr-routine-check{
+        top: 15px;
+    }
+    .dr-list{
+        height: 400px;
+    }
+    .dr-add-box{
+        left: 10px;
+        top: 550px;
+    }
+
 }
 @media (max-width : 480px){
-    .dr-title {
-        width: 80vw;
+    .container{
+        width: 360px;
     }
-    .dr-del-explain {
-        top: 20px;
+    .dr-today{
+        left: 5px;
+        width: 350px;
+    }
+    .dr-title {
+        font-size: 1rem;
+    }
+    .dr-add-box{
+        left: 5px;
     }
     .dr-del-btn:hover + .dr-del-explain {
-        right: -50px;
+        top: -40px;
+        right: 10px;
     }
 }
